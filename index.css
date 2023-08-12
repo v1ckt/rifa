@@ -1,0 +1,165 @@
+@font-face {
+    font-family: "myFont";
+    src: url("fonts/Helvetica.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'myFont';
+    list-style: none;
+    --header-h: 15vh;
+    --h-color: #FFFCEC;
+    --card-btn-color: #432418;
+    --card-color: #381C11;
+    --y-color: #FFF4BB;
+    --y-card-color: #FEF1A9;
+    --l-font: #FFF9DA;
+    --d-font: #532B1B;
+    font-size: 18px;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--h-color);
+}
+main {
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+}
+.bg {
+    position: fixed;
+    top: 0; left: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    mix-blend-mode: multiply;
+    opacity: .03;
+    z-index: -1;
+}
+#name {
+    display: none;
+    &.visible { display: block; }
+}
+.right button {
+    background: rgb(114, 83, 54);
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 5rem;
+    color: var(--l-font);
+}
+
+header {
+    width: 100vw;
+    height: var(--header-h);
+    display: flex; flex-direction: row; align-items: center; justify-content: center;
+}
+header img {
+    width: auto;
+    height: 90%;
+}
+.container {
+    width: 98vw;
+    height: calc(98vh - var(--header-h));
+    background: #FFF9DA;
+    border-radius: 1rem;
+    display: flex; flex-direction: row;
+    justify-content: space-evenly; align-items: center;
+    padding: 0 5rem;
+}
+
+.container .left {
+    display: none;
+    + .right.expanded {
+        width: 80vw;
+        height: 60vh;
+    }
+}
+
+.container .left {
+    display: none;
+    background-color: var(--y-card-color);
+    padding: .3rem;
+    border-radius: 1.5rem;
+    color: var(--d-font);
+}
+
+.container .left.visible {
+    display: flex;
+}
+
+.container .vencedores {
+    transition: all .15s;
+    display: flex; flex-direction: column; gap: .2rem;
+    justify-content: center; align-items: center;
+    font-weight: 600;
+    > p {
+        margin: .2rem 0;
+    }
+}
+.container .vencedores .vencedor {
+    width: 25vw;
+    background: var(--y-color);
+    border-radius: 1.2rem;
+    padding: 1rem;
+    display: flex; flex-direction: column; gap: .2rem;
+    justify-content: space-between; align-items: left;
+}
+
+.container .right {
+    transition: all .15s;
+    width: 20rem;
+    height: 16rem;
+    background-color: var(--card-color);
+    padding: .3rem;
+    border-radius: 2rem;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    gap: 1rem;
+    color: var(--l-font);
+    padding: 1rem;
+}
+
+.right .num {
+    background: var(--card-btn-color);
+    border-radius: 5rem;
+    padding: .4rem .8rem;
+    width: 12rem;
+    display: flex; flex-direction: row;
+    justify-content: center; align-items: center;
+
+    font-size: 5rem;
+    font-weight: bold;
+}
+.right .name, .right .sortear {
+    background: var(--card-btn-color);
+    border-radius: 5rem;
+    padding: .4rem .8rem;
+    font-size: 1.2rem;
+}
+.sortear {
+    color: var(--l-font);
+    height: 3rem;
+}
+.right .base {
+    display: flex; flex-direction: row; gap: 1rem;
+    justify-content: space-evenly; align-items: center;
+}
+.right .resortear {
+    background: var(--card-btn-color);
+    padding: .7rem 1rem;
+}
+.fwinner, .swinner {
+    margin-top: .5rem;
+    color: red;
+}
+#swinner, #fwinner {
+    transition: all .15s;
+}
+#swinner {
+    display: none;
+}
+#swinner.visible {
+    display: flex;
+}

@@ -1,0 +1,53 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>Sorteio</title>
+</head>
+
+<body>
+    <header>
+        <img src="img/logo.svg" alt="" class="logo">
+        <nav></nav>
+    </header>
+    <main>
+        <img class="bg" src="img/bg.svg" alt="">
+        <div class="container">
+            <div class="left">
+                <ul class="vencedores">
+                    <p>Vencedores</p>
+                    <li class="vencedor" id="fwinner">
+                        <h3>Primeiro Prêmio</h3>
+                        <h4><i>Uma torta de </br> Kitkat com morango</i></h4>
+                        <p class="fwinner"></p>
+                    </li>
+                    <li class="vencedor" id="swinner">
+                        <h3>Segundo Prêmio</h3>
+                        <h4><i>Um pudim tradicional</br>ou uma torta de limão</br>ou um pudim de maracujá</i></h4>
+                        <p class="swinner"></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="right expanded">
+                <div class="num">
+                    <p class="num" id="num">...</p>
+                </div>
+                <div class="base" style="display: none;">
+                    <div class="name" style="display: none;">
+                        <p class="name" id="name">...</p>
+                    </div>
+                    <button class="resortear" id="resortear" onclick="sortNum()"><i
+                            class="material-icons">refresh</i></button>
+                </div>
+                <button class="sortear" id="sortear" onclick="collApse()">Sortear</button>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

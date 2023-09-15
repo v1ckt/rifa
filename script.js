@@ -29,7 +29,8 @@ var names = {
   'Jonathan': [87, 88, 89, 90],
   'A Rita': [73, 123, 59, 169],
   'Manin k': [41, 34, 110, 122],
-  'Rayka': [53]
+  'Rayka': [53],
+  
 };
 var wc = 0;
 
